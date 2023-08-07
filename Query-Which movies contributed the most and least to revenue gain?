@@ -1,0 +1,19 @@
+--Which movies contributed the most to revenue gain?--
+SELECT title, SUM(amount)
+FROM film
+JOIN inventory ON film.film_id = inventory.film_id
+JOIN rental ON inventory.inventory_id = rental.inventory_id
+JOIN payment ON rental.rental_id = payment.rental_id
+GROUP BY film.film_id, film.title
+ORDER BY SUM DESC
+LIMIT 10
+
+--Which movies contributed the least to revenue gain?--
+SELECT title, SUM(amount)
+FROM film
+JOIN inventory ON film.film_id = inventory.film_id
+JOIN rental ON inventory.inventory_id = rental.inventory_id
+JOIN payment ON rental.rental_id = payment.rental_id
+GROUP BY film.film_id, film.title
+ORDER BY SUM ASC
+LIMIT 10
