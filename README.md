@@ -31,4 +31,15 @@ While the data used in this project is from the online video streaming industry,
 
 The focus will be on using a data set that includes information about Rockbuster's film inventory, customers, payments, and other relevant data. The data set is approximately 3MB in size and consists of several files. Relationships between tables are established when a column name is shared between them. Additionally, you can download both the Rockbuster data set:
 
-● [Download the Rockbuster data set]([https://pages.github.com/](http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip)http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip)
+[Download the Rockbuster data set](http://www.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip)
+
+
+### Project Deliverables
+
+[Presentation](https://drive.google.com/file/d/161l6-02XgRIyC15ItO-VJLRH79b1qnoy/view?usp=sharing)
+
+[Tableau Visualizations](https://public.tableau.com/app/profile/lorena.leone/viz/RockbusterStealthLLC_16878870528800/Story1)
+
+[Data Dictionary](https://drive.google.com/file/d/15nTXyKBBS_pzj27q_rS-pE6TohpvR7vJ/view?usp=sharing)
+
+[Queries & Results](https://docs.google.com/spreadsheets/d/15UdkJedfx27bJz_vMI36EVYZ0OnnOOfg/edit?usp=sharing&ouid=104802902088151502490&rtpof=true&sd=true)
