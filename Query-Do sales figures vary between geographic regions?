@@ -1,0 +1,122 @@
+--Do sales figures vary between geographic regions?--
+SELECT SUM(amount), country
+FROM country
+JOIN city ON city.country_id = country.country_id
+JOIN address ON address.city_id = city.city_id
+JOIN customer ON customer.address_id = address.address_id
+JOIN payment ON payment.customer_id = customer.customer_id
+GROUP BY country
+ORDER BY SUM DESC
+
+--Asia--
+SELECT J.name, COUNT(J.name)
+FROM country A
+JOIN city B ON B.country_id = A.country_id
+JOIN address C ON C.city_id = B.city_id
+JOIN customer D ON D.address_id = C.address_id
+JOIN payment E ON E.customer_id = D.customer_id
+JOIN rental F ON E.rental_id = F.rental_id
+JOIN inventory G ON F.inventory_id = G.inventory_id
+JOIN film H ON G.film_id = H.film_id
+JOIN film_category I ON H.film_id = I.film_id
+JOIN category J ON I.category_id = J.category_id
+WHERE A.country IN ('India', 'China', 'Japan', 'Philippines', 'Turkey', 'Indonesia', 
+                    'Taiwan', 'Iran', 'South Korea', 'Pakistan', 'Saudi Arabia', 'Israel', 
+                    'United Arab Emirates', 'Bangladesh', 'Thailand', 'Malaysia', 'Vietnam', 
+                    'Yemen', 'Cambodia', 'Myanmar', 'Sri Lanka')
+GROUP BY J.name
+ORDER BY COUNT DESC
+LIMIT 1
+
+--North America--
+SELECT J.name, COUNT(J.name)
+FROM country A
+JOIN city B ON B.country_id = A.country_id
+JOIN address C ON C.city_id = B.city_id
+JOIN customer D ON D.address_id = C.address_id
+JOIN payment E ON E.customer_id = D.customer_id
+JOIN rental F ON E.rental_id = F.rental_id
+JOIN inventory G ON F.inventory_id = G.inventory_id
+JOIN film H ON G.film_id = H.film_id
+JOIN film_category I ON H.film_id = I.film_id
+JOIN category J ON I.category_id = J.category_id
+WHERE A.country IN ('United States', 'Mexico', 'Canada', 'Puerto Rico',
+                                        'American Samoa', 'Virgin Islands, U.S.')
+GROUP BY J.name
+ORDER BY COUNT DESC
+LIMIT 1
+
+--South America--
+SELECT J.name, COUNT(J.name)
+FROM country A
+JOIN city B ON B.country_id = A.country_id
+JOIN address C ON C.city_id = B.city_id
+JOIN customer D ON D.address_id = C.address_id
+JOIN payment E ON E.customer_id = D.customer_id
+JOIN rental F ON E.rental_id = F.rental_id
+JOIN inventory G ON F.inventory_id = G.inventory_id
+JOIN film H ON G.film_id = H.film_id
+JOIN film_category I ON H.film_id = I.film_id
+JOIN category J ON I.category_id = J.category_id
+WHERE A.country IN ('Brazil', 'Argentina', 'Venezuela', 'Colombia', 'Ecuador',
+                                        'Paraguay', 'Peru', 'Chile', 'French Guiana', 'Bolivia')
+GROUP BY J.name
+ORDER BY COUNT DESC
+LIMIT 1
+
+--Europe--
+SELECT J.name, COUNT(J.name)
+FROM country A
+JOIN city B ON B.country_id = A.country_id
+JOIN address C ON C.city_id = B.city_id
+JOIN customer D ON D.address_id = C.address_id
+JOIN payment E ON E.customer_id = D.customer_id
+JOIN rental F ON E.rental_id = F.rental_id
+JOIN inventory G ON F.inventory_id = G.inventory_id
+JOIN film H ON G.film_id = H.film_id
+JOIN film_category I ON H.film_id = I.film_id
+JOIN category J ON I.category_id = J.category_id
+WHERE A.country IN ('Russia', 'United Kingdom', 'Poland', 'Germany', 'Italy',
+'Spain', 'Netherlands', 'France', 'Ukraine', 'Switzerland', 'Austria', 'Romania',
+Latvia', 'Bulgaria', 'Greece', 'Sweden', 'Belarus', 'Czech Republic', 'Lithuania',
+Hungary', 'Armenia', 'Estonia', 'Slovakia', 'Moldova', 'Faroe Islands',
+Holy See (Vatican City State)', 'Yugoslavia', 'Finland', 'Liechtenstein')
+GROUP BY J.name
+ORDER BY COUNT DESC
+LIMIT 1
+
+--Africa--
+SELECT J.name, COUNT(J.name)
+FROM country A
+JOIN city B ON B.country_id = A.country_id
+JOIN address C ON C.city_id = B.city_id
+JOIN customer D ON D.address_id = C.address_id
+JOIN payment E ON E.customer_id = D.customer_id
+JOIN rental F ON E.rental_id = F.rental_id
+JOIN inventory G ON F.inventory_id = G.inventory_id
+JOIN film H ON G.film_id = H.film_id
+JOIN film_category I ON H.film_id = I.film_id
+JOIN category J ON I.category_id = J.category_id
+WHERE A.country IN ('Nigeria', 'South Africa', 'Egypt', 'Algeria', 'Mozambique',
+               'Morocco', 'Tanzania', 'Kenya', 'Angola', 'Gambia', 'Ethiopia', 'Malawi',
+                                               'Senegal', 'Zambia', 'Chad', 'Madagascar', 'Reunion')
+GROUP BY J.name
+ORDER BY COUNT DESC
+LIMIT 1
+
+--Oceania--
+SELECT J.name, COUNT(J.name)
+FROM country A
+JOIN city B ON B.country_id = A.country_id
+JOIN address C ON C.city_id = B.city_id
+JOIN customer D ON D.address_id = C.address_id
+JOIN payment E ON E.customer_id = D.customer_id
+JOIN rental F ON E.rental_id = F.rental_id
+JOIN inventory G ON F.inventory_id = G.inventory_id
+JOIN film H ON G.film_id = H.film_id
+JOIN film_category I ON H.film_id = I.film_id
+JOIN category J ON I.category_id = J.category_id
+WHERE A.country IN ('Australia', 'New Zealand', 'French Polynesia')
+GROUP BY J.name
+ORDER BY COUNT DESC
+LIMIT 1
