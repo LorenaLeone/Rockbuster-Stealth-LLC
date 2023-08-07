@@ -1,0 +1,9 @@
+--Where are customers with a high lifetime value based?--
+SELECT SUM(amount), a.customer_id, d.country
+FROM payment
+JOIN customer A ON payment.customer_id = a.customer_id
+JOIN address B ON a.address_id = b.address_id
+JOIN city C ON b.city_id = c.city_id
+JOIN country D ON c.country_id = d.country_id
+GROUP BY a.customer_id, d.country
+ORDER BY SUM DESC
