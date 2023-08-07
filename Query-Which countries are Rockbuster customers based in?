@@ -1,0 +1,8 @@
+--Which countries are Rockbuster customers based in?--
+SELECT a.country, COUNT(customer_id)
+FROM country A
+JOIN city ON city.country_id = a.country_id
+JOIN address ON address.city_id = city.city_id
+JOIN customer ON customer.address_id = address.address_id
+GROUP BY a.country
+ORDER BY COUNT DESC
