@@ -10,9 +10,13 @@ In this project, the goal is to help Rockbuster Stealth LLC, a movie rental comp
 The Rockbuster Stealth Management Board has asked a series of business questions and they expect data-driven answers that they can use for their 2020 company strategy. Here are the main questions they’d like to answer:
 
 ● Which movies contributed the most/least to revenue gain?
+
 ● What was the average rental duration for all videos?
+
 ● Which countries are Rockbuster customers based in?
+
 ● Where are customers with a high lifetime value based?
+
 ● Do sales figures vary between geographic regions?
 
 
@@ -27,9 +31,4 @@ While the data used in this project is from the online video streaming industry,
 
 The focus will be on using a data set that includes information about Rockbuster's film inventory, customers, payments, and other relevant data. The data set is approximately 3MB in size and consists of several files. Relationships between tables are established when a column name is shared between them. Additionally, you can download both the Rockbuster data set:
 
-● It’s around 3MB and contains several files.
-● A relationship exists between two tables if a column name is present in both tables.
-To install PostgreSQL and load the Rockbuster data set into it, follow the instructions in
-Exercise 3.1: Introduction to Relational Databases carefully.
 ● Download the Rockbuster data set
-● Download PostgreSQL Database (for Windows, macOS X, and Linux)
